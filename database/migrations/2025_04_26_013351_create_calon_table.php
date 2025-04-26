@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('visi');
             $table->string('misi');
-            $table->foreign('pemilih_i') -> references('pemilih_id')->on('pemilihan');
+            $table->foreign('pemilih_id') -> references('pemilih_id')->on('pemilihan');
             $table->timestamps();
         });
     }
