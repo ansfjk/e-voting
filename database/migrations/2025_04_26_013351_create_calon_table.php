@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('calon', function (Blueprint $table) {
             $table->id();
-            $table->foreign('',['']);
+            $table->string('visi');
+            $table->string('misi');
+            $table->foreign('pemilih_i') -> references('pemilih_id')->on('pemilihan');
             $table->timestamps();
         });
     }
